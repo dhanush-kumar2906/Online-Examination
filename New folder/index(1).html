@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="bo">
+        <div class="container">
+            <form name="myform" action="demo.html">
+                <h1 class="form">LOGIN FORM</h1>
+                <h2 class="per">Personal Details</h2>
+                <h3>First Name</h3>
+                <input placeholder="" id="firstName" class="in" onblur="first()" onkeyup="first()" />
+                <h4 id="FirstError"></h4>
+                <h3>Last Name</h3>
+                <input placeholder="" id="SecName" class="in" onblur="second()" onkeyup="second()" />
+                <h4 id="SecError"></h4>
+                <h3>Date Of Birth</h3>
+                <input type="date" class="in" style="font-size: 1.2rem;" id="DOB" onblur="date()" />
+                <h4 id="DobError"></h4>
+                <h3>Gender</h3>
+                <div class="gap">
+                    <input type="radio" name="gender" value="Male"  onclick="gen()"><label>Male</label>
+                    <input type="radio" name="gender" value="Female"  onclick="gen()"><label>Female</label>
+                    <input type="radio" name="gender" value="Other's"  onclick="gen()"><label>Other's</label>
+                </div>
+                <h4 id="Gen-error"></h4>
+                <h3>E-Mail</h3>
+                <input placeholder="" type="email" class="in" id="Mail" pattern="[a-z]*+@\gmail.com" onblur="mail()" />
+                <h4 id="mail-error"></h4>
+                <h3>Password</h3>
+                <input placeholder="" class="in" id="pass" type="password" onblur="passwords()"
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"/>
+
+                <h4 id="pass-error"></h4>
+                <h3>Address</h3>
+                <textarea class="add" id="add-error" onblur="add()" onkeyup="add()"></textarea>
+                <h4 id="AddError"></h4>
+
+                <h2 class="per">About Course</h2>
+
+                <h3>Timing For Class</h3>
+                <div class="ti">
+                    <input type="checkbox" name="time" value="10-1" id="timing" onclick="time()"><label>10-1</label>
+                    <input type="checkbox" name="time" value="2-5" id="timing" onclick="time()"><label>2-5</label>
+                    <input type="checkbox" name="time" value="5-7" id="timing" onclick="time()"><label>5-7</label>
+                    <input type="checkbox" name="time" value="Anyothers" id="timing"
+                        onclick="time()"><label>AnyOther</label>
+                </div>
+                <h4 id="timeError"></h4>
+                <h3>Course</h3>
+                <input class="in" type="text" placeholder="---Please Select Anyone--" list="subject">
+                <datalist id="subject">
+                    <option value="BackEnd"></option>
+                    <option value="FrontEnd"></option>
+                    <option value="Java"></option>
+                    <option value="C"></option>
+                </datalist>
+                <h3>Your Interest In Programming</h3>
+                <input type="range" class="in" id="interest" min="0" max="100" value="0" />
+                <h4 i="range-error"></h4>
+                <h3>Qualification</h3>
+                <input class="in" id="Quali" onblur="qulificaitons();" onkeyup="qulificaitons()">
+                <h4 id="Quali-error"></h4>
+                <h3>Your Photo</h3>
+                <input type="file" id="pic" />
+                <h4 id="pic-error"></h4>
+                <br />
+                <div class="BUTTON">
+                    <button class="btn" type="reset">RESET</button>
+                    <button class="btn" onclick="preview()" type="button">PREVIEW</button>
+                </div>
+                <br />
+            </form>
+        </div>
+    </div>
+    <script src="script.js" defer></script>
+
+</body>
+
+</html>

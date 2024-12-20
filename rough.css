@@ -1,0 +1,234 @@
+/* ---- reset ---- */
+body {
+    margin: 0;
+    font: normal 75% Arial, Helvetica, sans-serif;
+}
+
+canvas {
+    display: block;
+    /* vertical-align: bottom; */
+}
+
+/* ---- particles.js container ---- */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #2c2e43;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+/* ---- stats.js ---- */
+
+.js-count-particles {
+    font-size: 1.1em;
+}
+
+#stats,
+.count-particles {
+    /* -webkit-user-select: none; */
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+#stats {
+    border-radius: 3px 3px 0 0;
+    overflow: hidden;
+}
+
+.count-particles {
+    border-radius: 0 0 3px 3px;
+}
+
+.la {
+    font-size: 1.1rem;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    padding-top: 1.5rem;
+}
+
+.bt {
+    border: 2px solid #acacac;
+    height: 2rem;
+    width: 8rem;
+    cursor: pointer;
+    color: #0b0b0b;
+    background: transparent;
+    letter-spacing: 2px;
+    border-radius: 10px;
+}
+
+.bt:hover {
+    background-color: #0b0b0b;
+    color: #eee;
+    transition: all 0.5s;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+.border {
+    border: 1px solid rgb(78, 77, 77);
+    min-height: fit-content;
+    min-width: fit-content;
+    padding: 1rem 5rem 2rem 5rem;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+}
+
+.lo {
+    background: linear-gradient(90deg, #00000000, black);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    letter-spacing: 3px;
+    font-size: 2rem;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.popup {
+    width: 400px;
+    border-radius: 12px;
+    position: fixed;
+    background: #fff;
+    color: #333;
+    top: 0;
+    align-items: center;
+    left: 50%;
+    transform: translate(-50%, -50%)scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    visibility: hidden;
+    transition: transform 0.4s,top 0.4s;
+}
+.popup img {
+    width: 100px;
+    margin-top: -10%;
+    border-radius: 50%;
+
+}
+
+.popup h2 {
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+}
+
+.popup h1 {
+    width: 20rem;
+    height: 1rem;
+    margin-left: 2rem;
+    margin-top: 50px;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #6fdc49;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.popup a{
+    text-decoration: none;
+}
+.open-popup {
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    
+}
+.btns{
+    border: 2px solid #acacac;
+    height: 2rem;
+    width: 9rem;
+    cursor: pointer;
+    color: #0b0b0b;
+    background: transparent;
+    letter-spacing: 1px;
+    border-radius: 10px;
+}
+.btns:hover{
+    background-color: #0b0b0b;
+    color: #eee;
+    transition: all 0.5s;
+    border: 2px solid black;
+    width: 10rem;
+    height: 2rem;
+    border-radius: 20px;
+}
+.open-bo{
+    visibility: hidden;
+}
+.bo{
+    visibility: visible;
+}
+@media (max-width:991px){
+    h1{
+        font-size: calc(1vw + 1rem);
+    }
+    h2{
+        font-size: calc((1vw + 0.8rem));
+    }
+    .la{
+        font-size: calc(1vw + 0.8rem);
+    }
+    .border{
+        padding: 1rem 3.5rem 2rem 3.5rem;
+    }
+    .lo{
+        font-size: calc(1vw + 1rem);
+        letter-spacing: normal;
+    }
+}
+
+@media(max-width:361px){
+    .btns{
+        border: 1px solid #acacac;
+        height: 1.5rem;
+        width: 7rem;
+        cursor: pointer;
+        color: #0b0b0b;
+        background: transparent;
+        letter-spacing: 1px;
+        border-radius: 5px;
+    }
+    .btns:hover{
+        background-color: #0b0b0b;
+        color: #eee;
+        transition: all 0.5s;
+        border: 2px solid black;
+        border-radius: 10px;
+    }
+    .border{
+        padding: 1rem 1.5rem 2rem 1.5rem;
+    }
+}
+@media(max-width:420px){
+   .border{
+    padding: 1rem 1.5rem 2rem 1.5rem;
+   }
+}
+@media(max-width:1024px){
+    h1{
+        font-size: 1.5rem;
+    }
+    h2{
+        font-size: 1.2rem;
+    }
+    .border{
+        padding: 1rem 3rem 2rem 3rem;
+    }
+}

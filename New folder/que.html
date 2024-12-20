@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KSP Academy</title>
+    <style >
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .op {
+            font-size: 1.5rem;
+            margin-left: 1rem;
+        }
+
+        .program {
+            margin-left: 2rem;
+        }
+
+        .popup {
+            width: 400px;
+            border-radius: 6px;
+            position: fixed;
+            background: #333;
+            color: #fff;
+            top: 50%;
+            align-items: center;
+            left: 50%;
+            transform: translate(-50%, -50%)scale(0.1);
+            text-align: center;
+            padding: 0 30px 30px;
+            visibility: hidden;
+
+        }
+        .bo{
+            visibility: visible;
+        }
+
+        .popup img {
+            width: 100px;
+            margin-top: -10%;
+            border-radius: 50%;
+
+        }
+
+        .popup h2 {
+            font-size: 38px;
+            font-weight: 500;
+            margin: 30px 0 10px;
+        }
+
+        .popup h1 {
+            width: 20rem;
+            height: 1rem;
+            margin-left: 2rem;
+            margin-top: 50px;
+            text-align: center;
+            padding: 10px 0;
+            background-color: #6fdc49;
+            color: #fff;
+            font-size: 18px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .popup a{
+            text-decoration: none;
+        }
+        .open-bo{
+            visibility: hidden;
+        }
+        .open-popup {
+            visibility: visible;
+            top: 50%;
+            transform: translate(-50%, -50%) scale(1);
+        }
+        .btn {
+            height: 3rem;
+            width: 10rem;
+            border: 2px solid rgb(22, 22, 22);
+            border-radius: 12px;
+            cursor: pointer;
+            float: inline-end;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            background-color: rgb(22, 22, 22);
+            color: white;
+        }
+
+        h5 {
+            color: red;
+        }
+        @media(max-width:991px){
+            h2{
+                font-size: calc(1vw + 0.8rem);
+            }
+            h1{
+                font-size: calc(1vw + 1rem);
+            }
+            .op{
+                font-size: calc(1vw + 0.8rem);
+            }
+        }
+    </style>
+</head>
+
+<body class="bo" id="bo">
+    <form name="myform" action="page.html" method="post">
+        <h1 style="text-decoration: underline;">PROBLEMS ON TRAIN</h1>
+        <br>
+        <h2>1.A train running at the speed of 60 km/hr crosses a pole in 9 seconds. What is the length of the train?
+        </h2>
+        <div class="op">
+            <input type="radio" name="quesone" value="120" onclick="q1()" required>
+            <label>120 Meters</label><br>
+            <input type="radio" name="quesone" value="180" onclick="q1()">
+            <label>180 Meters</label><br>
+            <input type="radio" name="quesone" value="324" onclick="q1()">
+            <label>324 Meters</label><br>
+            <input type="radio" name="quesone" value="150" onclick="q1()">
+            <label>150 Meters</label>
+            <h5 id="qError"></h5>
+
+        </div>
+        <br>
+        <h2>2.A train 125 m long passes a man, running at 5 km/hr in the same direction in which the train is going,
+            in 10 seconds. The speed of the train is:</h2>
+        <div class="op">
+            <input type="radio" name="ques2" value="42" onclick="q2()" id="check" required>
+            <label>42 km/hr</label><br>
+            <input type="radio" name="ques2" value="36" onclick="q2()" id="check">
+            <label>36 km/hr</label><br>
+            <input type="radio" name="ques2" value="50" onclick="q2()" id="check">
+            <label>50 km/hr</label><br>
+            <input type="radio" name="ques2" value="29" onclick="q2()" id="check">
+            <label>29 km/hr</label>
+            <h5 id="q2Error"></h5>
+        </div>
+        <br>
+        <h2>3.The length of the bridge, which a train 130 metres long and travelling at 45 km/hr can cross in 30
+            seconds, is:</h2>
+        <div class="op">
+            <input type="radio" name="ques3" value="200" onclick="q3()" required>
+            <label>200 M</label><br>
+            <input type="radio" name="ques3" value="225" onclick="q3()">
+            <label>225 M</label><br>
+            <input type="radio" name="ques3" value="245" onclick="q3()">
+            <label>245 M</label><br>
+            <input type="radio" name="ques3" value="250" onclick="q3()">
+            <label>250 M</label>
+            <h5 id="q3Error"></h5>
+        </div><br>
+        <h1 style="text-decoration: underline;">TIME AND WORK</h1>
+        <br>
+        <h2> 1.A alone can do a piece of work in 6 days and B alone in 8 days. A and B undertook to do it for Rs.
+            3200. With the help of C, they completed the work in 3 days. How much is to be paid to C?</h2>
+        <div class="op">
+            <input type="radio" name="ques4" value="200" onclick="q4()" required>
+            <label> Rs.200 </label><br>
+            <input type="radio" name="ques4" value="400" onclick="q4()">
+            <label> Rs.400</label><br>
+            <input type="radio" name="ques4" value="375" onclick="q4()">
+            <label> Rs.375 </label><br>
+            <input type="radio" name="ques4" value="234" onclick="q4()">
+            <label>Rs.234 </label>
+            <h5 id="q4Error"></h5>
+        </div><br>
+        <h2>2.If 6 men and 8 boys can do a piece of work in 10 days while 26 men and 48 boys can do the same in 2
+            days, the time taken by 15 men and 20 boys in doing the same type of work will be:</h2>
+        <div class="op">
+            <input type="radio" name="ques5" value="4" onclick="q5()" required>
+            <label> 4 Days </label><br>
+            <input type="radio" name="ques5" value="5" onclick="q5()">
+            <label> 5 Days</label><br>
+            <input type="radio" name="ques5" value="6" onclick="q5()">
+            <label> 6 Days </label><br>
+            <input type="radio" name="ques5" value="7" onclick="q5()">
+            <label> 7 Days </label>
+            <h5 id="q5Error"></h5>
+        </div><br>
+        <h2>3.A can do a piece of work in 4 hours; B and C together can do it in 3 hours, while A and C together can
+            do it in 2 hours. How long will B alone take to do it?</h2>
+        <div class="op">
+            <input type="radio" name="ques6" value="8" onclick="q6()" required>
+            <label> 8 Hours </label><br>
+            <input type="radio" name="ques6" value="10" onclick="q6()">
+            <label> 10 Hours </label><br>
+            <input type="radio" name="ques6" value="12" onclick="q6()">
+            <label> 12 Hours </label><br>
+            <input type="radio" name="ques6" value="24" onclick="q6()">
+            <label> 24 Hours </label>
+            <h5 id="q6Error"></h5>
+        </div><br>
+        <h1 style="text-decoration: underline;"> TIME AND DISTANCE</h1><br>
+        <h2>1.If a person walks at 14 km/hr instead of 10 km/hr, he would have walked 20 km more. The actual
+            distance travelled by him is:</h2>
+        <div class="op">
+            <input type="radio" name="ques7" value="50" onclick="q7()" required>
+            <label> 50 Km </label><br>
+            <input type="radio" name="ques7" value="29" onclick="q7()">
+            <label> 29 Km </label><br>
+            <input type="radio" name="ques7" value="60" onclick="q7()">
+            <label> 60 Km </label><br>
+            <input type="radio" name="ques7" value="45" onclick="q7()">
+            <label> 45 Km </label>
+            <h5 id="q7Error"></h5>
+        </div><br>
+        <h2>2.Excluding stoppages, the speed of a bus is 54 kmph and including stoppages, it is 45 kmph. For how
+            many minutes does the bus stop per hour?</h2>
+        <div class="op">
+            <input type="radio" name="ques8" value="9" onclick="q8()" required>
+            <label> 9 Min</label><br>
+            <input type="radio" name="ques8" value="10" onclick="q8()">
+            <label> 10 Min</label><br>
+            <input type="radio" name="ques8" value="12" onclick="q8()">
+            <label> 12 Min </label><br>
+            <input type="radio" name="ques8" value="20" onclick="q8()">
+            <label> 20 Min </label>
+            <h5 id="q8Error"></h5>
+        </div><br>
+        <h2>3.Robert is travelling on his cycle and has calculated to reach point A at 2 P.M. if he travels at 10
+            kmph, he will reach there at 12 noon if he travels at 15 kmph. At what speed must he travel to reach A
+            at 1 P.M.?</h2>
+        <div class="op">
+            <input type="radio" name="ques9" value="8" onclick="q9()" required>
+            <label> 8 Kmph</label><br>
+            <input type="radio" name="ques9" value="13" onclick="q9()">
+            <label> 13 Kmph</label><br>
+            <input type="radio" name="ques9" value="12" onclick="q9()">
+            <label> 12 Kmph </label><br>
+            <input type="radio" name="ques9" value="5" onclick="q9()">
+            <label> 5 Kmph </label>
+            <h5 id="q9Error"></h5>
+        </div><br>
+        <h2 style="text-decoration: underline;">PROGRAMING IN PYTHON</h2><br>
+        <h2> 1.Your Number Is Given below</h2>
+        <h2>Then a=17</h2>
+        <div class="program">
+            <h3>if a>=18 :</h3>
+            <h3>&nbsp&nbsp&nbsp Voting Eligeble</h3>
+            <h3>else :</h3>
+            <h3>&nbsp&nbsp&nbsp Voting Not Eligeble</h3>
+        </div>
+        <div class="op">
+            <input type="radio" name="ques10" value="18" onclick="q10()" required>
+            <label> Voting Eligeble</label><br>
+            <input type="radio" name="ques10" value="17" onclick="q10()">
+            <label> Voting Not Eligeble</label><br>
+            <input type="radio" name="ques10" value="1" onclick="q10()">
+            <label> Syntax Error</label><br>
+            <h5 id="q10Error"></h5>
+        </div><br>
+        <form>
+            <div class="container">
+                <button class="btn" type="button" onclick="sub()">Next</button>
+                <div class="popup" id="popup">
+                    <img src="images/tick2.webp">
+                    <h2>Thank You!</h2>
+                    <p>Your Answer Has Been Successfully Submitted. Thanks!</p>
+                    <a type="button" href="page.html" onclick="closepopup()">
+                        <h1>Next</h1>
+                    </a>
+                </div>
+            </div>
+        </form>
+        <script src="question.js"></script>
+</body>
+
+</html>

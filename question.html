@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KSP Academy</title>
+    <link rel="stylesheet" href="rough.css">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+
+</head>
+
+<body>
+    
+    <div id="particles-js"></div> 
+    <div class="count-particles" id="bo">
+        <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
+        <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+        <div>
+            <div class="border">
+                <h1 class="lo">ONLINE EXAMINATION</h1><br>
+                <h2 id="head" style="text-decoration: underline;"></h2>
+                <h2 id="ques"></h2>
+                <input type="radio" id="option1" name="option" onclick=' val("one")' required>
+                <label id="op1" class="la" for="option1"></label><br>
+                <input type="radio" id="option2" name="option" onclick=' val("two")' required>
+                <label id="op2" class="la" for="option2"></label><br>
+                <input type="radio" id="option3" name="option" onclick=' val("three")' required>
+                <label id="op3" class="la" for="option3"></label><br>
+                <input type="radio" id="option4" name="option" onclick=' val("four")' required>
+                <label id="op4" class="la" for="option4"></label><br>
+                <h4 id="ans-error"></h4>
+                <div class="btn">
+                    <button type="submit" onclick="previousradcheck()" id="previous" class="bt">PREVIOUS</button>
+                    <button type="submit" onclick="radcheck()" id="next" class="bt">NEXT</button>                
+                </div>
+                <form>
+                    <div class="container">
+                        <div class="popup" id="popup">
+                            <img src="images/tick2.webp">
+                            <h2>Thank You!</h2>
+                            <p>Your Answer Has Been Successfully Submitted. Thanks!</p>
+                            <a type="button"  onclick="closepopup()" href="page.html">
+                                <h1>Next</h1>
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="rough.js"></script>
+    <script src="questionAns.js"></script>
+</body>
+
+</html>

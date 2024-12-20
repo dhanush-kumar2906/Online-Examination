@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KSP Academy</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="particles.css">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+
+</head>
+
+<body>
+    <div id="particles-js"></div>
+    <div class="count-particles">
+        <form action="question.html">
+            <div class="container">
+                <div class="border">
+                    <h1 class="lo">LOGIN FORM</h1><br>
+                    <section>
+                        <div class="form-group">
+                            <input type="text" placeholder="USER NAME" onblur="user()" id="use" onkeyup="user()"
+                                required>
+                            <label class="form-label">User Name</label>
+                            <h3 style="color: rgb(243, 37, 37);" id="useError"> </h3>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" id="pass" placeholder="PASSWORD"
+                                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" onblur="passwords()"
+                                title="Must contain at least one number and one uppercase and lowercase letter, and at least 6 or more characters"
+                                required>
+                            <label class="form-label">Password</label>
+                            <h3 style="color: rgb(243, 37, 37);" id="pass-error"> </h3><br>
+                        </div>
+                        <div class="buttons">
+                            <button class="btn" type="reset" onclick="rest()">RESET</button>
+                            <button class="btn" onclick="con()" type="submit">CONFIRM</button>
+                        </div>
+                        <br>
+                    </section>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+
+    <script src="script.js"></script>
+    <script src="particles.js"></script>
+</body>
+
+</html>

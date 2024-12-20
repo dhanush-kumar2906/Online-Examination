@@ -1,0 +1,50 @@
+// // function passwords() {
+// //     var passwrd = document.getElementById('pass').value
+// //     let passError = document.getElementById('pass-error')
+// //     if (passwrd == "") {
+// //         passError.innerHTML = "Please Enter The Passsword"
+// //     } else {
+// //         passError.innerHTML = ""
+// //         passconl();
+// //     }
+
+
+// // }
+// // function passconl() {
+// //     var passwrd = document.getElementById('pass')
+// //     let passError = document.getElementById('pass-error')
+// //     if (passwrd.value.match(lowerCaseLetters)) {
+// //         passconA();
+// //     } else {
+// //         passError.innerHTML = "Use Atleast One Lower Case"
+// //     }
+// // }
+// // function passconA() {
+// //     var passwrd = document.getElementById('pass')
+// //     let passError = document.getElementById('pass-error')
+// //     if (passwrd.value.match(upperCaseLetters)) {
+// //         passconN();
+// //     } else {
+// //         passError.innerHTML = "Use Atleast One Upper Case"
+// //     }
+// // }
+// // function passconN() {
+// //     var passwrd = document.getElementById('pass')
+// //     let passError = document.getElementById('pass-error')
+// //     if (passwrd.value.match(numbers)) {
+// //         passconLEN();
+// //     } else {
+// //         passError.innerHTML = "Use Atleast One Number"
+// //     }
+// // }
+// // function passconLEN() {
+// //     var passwrd = document.getElementById('pass')
+// //     let passError = document.getElementById('pass-error')
+// //     if (passwrd.value.length >= 6) {
+// //         passError.innerHTML = ""
+// //     } else {
+// //         passError.innerHTML = "Minimum length is 6"
+// //     }
+// // }
+// onblur="passwords()"
+//                     pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" onkeyup="passwords()"

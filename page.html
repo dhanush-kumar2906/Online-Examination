@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KSP Academy</title>
+    <link rel="stylesheet" href="last.css">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+
+</head>
+
+<body class="bo" id="bo">
+    <form>
+        <div class="container">
+            <h1>Marks</h1>
+            <h2>PROBLEMS ON TRAIN:</h2>
+            <label id="train"></label><label> Out Of 3</label>
+            <h2>TIME AND WORK</h2>
+            <label id="time"></label><label>Out Of 3</label>
+            <h2>TIME AND DISTANCE</h2>
+            <label id="distance"></label><label>Out Of 3</label>
+            <h2>TOTAL MARKS</h2>
+            <label id="marks"></label><label>Out Of 9</label>
+            <br><br>
+            <div class="pop">
+                <div class="popup" id="popup">
+                    <img src="images/tick2.webp">
+                    <h2>Thank You!</h2>
+                    <p>Your Are Selected.Thanks!</p>
+                    <a type="button" href="index.html" onclick="closepopup()">
+                        <h1>OK</h1>
+                    </a>
+                </div>
+            </div>
+            <div class="pop">
+                <div class="wpopup" id="wpopup">
+                    <img src="images/wrong.jfif">
+                    <h2>Thank You!</h2>
+                    <p>Better Luck Next Time.Thanks!</p>
+                    <a type="button" href="index.html" onclick="wclosepopup()">
+                        <h1>OK</h1>
+                    </a>
+                </div>
+            </div>
+            <button class="btn" type="button" onclick="meassage()">Next</button>
+        </div>
+    </form>
+
+    <script>
+        var t = parseInt(document.getElementById('train').innerHTML = localStorage.getItem("passValue"))
+        var ti = parseInt(document.getElementById('time').innerHTML = localStorage.getItem("textValue"))
+        var distance = parseInt(document.getElementById('distance').innerHTML = localStorage.getItem("Value"))
+        var py = parseInt(document.getElementById('marks').innerHTML = localStorage.getItem("answerValue"))
+        function meassage() {
+            if (py <= 7) {
+                wopenpopup();
+            } else {
+                openpopup();
+            }
+        }
+        function openpopup() {
+            var popup = document.getElementById('popup')
+            var bo = document.getElementById("bo")
+            bo.classList.add('open-bo')
+            popup.classList.add("open-popup")
+        }
+        function closepopup() {
+            popup.classList.remove('open-popup')
+        }
+        function wopenpopup() {
+            var wpopup = document.getElementById('wpopup')
+            var bo = document.getElementById("bo")
+            bo.classList.add('open-bo')
+            wpopup.classList.add("wopen-popup")
+        }
+        function wclosepopup() {
+            wpopup.classList.remove("wopen-popup")
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <div class="container">
+            <div class="popup" id="popup">
+                <img src="images/tick2.webp">
+                <h2>Thank You!</h2>
+                <p>Your Answer Has Been Successfully Submitted. Thanks!</p>
+                <a type="button"  onclick="closepopup()" href="page.html">
+                    <h1>Next</h1>
+                </a>
+            </div>
+        </div>
+    </form>
+    .popup {
+        width: 400px;
+        border-radius: 12px;
+        position: fixed;
+        background: #fff;
+        color: #333;
+        top: 0;
+        align-items: center;
+        left: 50%;
+        transform: translate(-50%, -50%)scale(0.1);
+        text-align: center;
+        padding: 0 30px 30px;
+        visibility: hidden;
+        transition: transform 0.4s,top 0.4s;
+    }
+    .popup img {
+        width: 100px;
+        margin-top: -10%;
+        border-radius: 50%;
+    
+    }
+    
+    .popup h2 {
+        font-size: 38px;
+        font-weight: 500;
+        margin: 30px 0 10px;
+    }
+    
+    .popup h1 {
+        width: 20rem;
+        height: 1rem;
+        margin-left: 2rem;
+        margin-top: 50px;
+        text-align: center;
+        padding: 10px 0;
+        background-color: #6fdc49;
+        color: #fff;
+        font-size: 18px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    .popup a{
+        text-decoration: none;
+    }
+    .open-popup {
+        visibility: visible;
+        top: 50%;
+        transform: translate(-50%, -50%) scale(1);
+    }
+</body>
+</html>
